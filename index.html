@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация и вход</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="formContainer">
+    <!-- Форма регистрации -->
+    <div id="registrationForm">
+        <h2>Регистрация</h2>
+        <form id="registerForm">
+            <label for="registerLogin">Логин:</label>
+            <input type="text" id="registerLogin" name="login" required>
+            <br>
+
+            <label for="registerPassword">Пароль:</label>
+            <input type="password" id="registerPassword" name="password" required>
+            <br>
+
+            <label for="registerConfirmPassword">Подтверждение пароля:</label>
+            <input type="password" id="registerConfirmPassword" name="confirmPassword" required>
+            <br>
+
+            <label for="registerEmail">Email:</label>
+            <input type="email" id="registerEmail" name="email" required>
+            <br>
+
+            <button type="submit">Готово</button>
+        </form>
+        <div id="registerErrorMessages"></div>
+        <p>Уже зарегистрированы? <a href="#" id="goToLogin">Войти</a></p>
+    </div>
+
+    <!-- Форма входа -->
+    <div id="loginForm" style="display: none;">
+        <h2>Вход</h2>
+        <form id="signInForm">
+            <label for="loginInput">Логин:</label>
+            <input type="text" id="loginInput" name="loginInput" required>
+            <br>
+
+            <label for="loginPassword">Пароль:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+            <br>
+
+            <button type="submit">Войти</button>
+        </form>
+        <div id="loginErrorMessages"></div>
+    </div>
+
+    <!-- Форма выбора языка и профессии -->
+    <div id="languageProfessionForm" style="display: none;">
+        <h2>Выбор языка и профессии</h2>
+        <form id="languageProfession">
+            <label for="language">Язык:</label>
+            <select id="language" name="language" required>
+                <option value="ru">Русский</option>
+                <option value="en">Английский</option>
+                <option value="de">Немецкий</option>
+            </select>
+            <br>
+
+            <label for="profession">Профессия:</label>
+            <input type="text" id="profession" name="profession" required>
+            <br>
+
+            <button type="submit">Сохранить</button>
+        </form>
+        <div id="languageProfessionMessages"></div>
+    </div>
+
+    <!-- Отображение профиля -->
+    <div id="profileDisplay" style="display: none;">
+        <h2>Профиль</h2>
+        <p><strong>Имя пользователя:</strong> <span id="profileName"></span></p>
+        <p><strong>Язык:</strong> <span id="profileLanguage"></span></p>
+        <p><strong>Профессия:</strong> <span id="profileProfession"></span></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

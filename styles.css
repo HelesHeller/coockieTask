@@ -1,0 +1,112 @@
+/* Базовые стили для страницы */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ecf0f1;
+}
+
+/* Контейнер формы */
+#formContainer {
+    background: #ffffff;
+    color: #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Заголовок формы */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #2980b9;
+}
+
+/* Стили для полей ввода */
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Фокус на полях ввода */
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Кнопка отправки формы */
+button[type="submit"] {
+    width: 100%;
+    background: #2980b9;
+    color: #ffffff;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 20px;
+}
+
+/* Наведение на кнопку */
+button[type="submit"]:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+}
+
+/* Сообщения об ошибках */
+#errorMessages {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Анимация появления формы */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность формы */
+@media (max-width: 480px) {
+    #formContainer {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"] {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
